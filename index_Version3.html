@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hot Take Randomizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Hot Take Randomizer</h1>
+    <p>Load your list of hot take questions into <code>hot-takes.txt</code> (one per line), then click "Randomize".</p>
+
+    <div class="controls">
+      <label>
+        How many picks:
+        <input id="count" type="number" min="1" value="1" />
+      </label>
+      <button id="randomize">Randomize</button>
+      <button id="shuffleAll">Shuffle All</button>
+    </div>
+
+    <section id="output" aria-live="polite"></section>
+
+    <details>
+      <summary>Sample hot takes (edit hot-takes.txt)</summary>
+      <pre id="samplePreview"></pre>
+    </details>
+
+    <footer>
+      <small>Built with ❤️ — static site, can be hosted via GitHub Pages.</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
