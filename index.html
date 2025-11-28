@@ -8,8 +8,16 @@
 </head>
 <body>
   <main>
-    <h1>Hot Take Randomizer</h1>
-    <p>Load your list of hot take questions into <code>hot-takes.txt</code> (one per line), then click "Randomize".</p>
+    <div class="header-nav">
+      <h1>Hot Take Randomizer</h1>
+      <a href="manage.html" class="nav-link">⚙️ Manage Questions</a>
+    </div>
+    <p>Select a category and click "Randomize" to get random hot take questions.</p>
+
+    <div class="category-selector">
+      <button class="category-btn active" data-category="filipino">🇵🇭 Filipino</button>
+      <button class="category-btn" data-category="international">🌍 International</button>
+    </div>
 
     <div class="controls">
       <label>

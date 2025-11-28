@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manage Hot Takes - Hot Take Randomizer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="manage.css" />
+</head>
+<body>
+  <main>
+    <div class="header-nav">
+      <h1>Manage Hot Takes</h1>
+      <a href="index.html" class="nav-link">← Back to Randomizer</a>
+    </div>
+    <p>Add, edit, or remove questions from each category.</p>
+
+    <div class="category-selector">
+      <button class="category-btn active" data-category="filipino">🇵🇭 Filipino</button>
+      <button class="category-btn" data-category="international">🌍 International</button>
+    </div>
+
+    <div class="add-section">
+      <h2>Add New Question</h2>
+      <div class="add-form">
+        <input type="text" id="newQuestion" placeholder="Enter a new hot take question..." />
+        <button id="addBtn">Add Question</button>
+      </div>
+    </div>
+
+    <div class="list-section">
+      <div class="list-header">
+        <h2>Questions (<span id="questionCount">0</span>)</h2>
+        <button id="clearAllBtn" class="danger-btn">Clear All</button>
+      </div>
+      <ul id="questionList" class="question-list"></ul>
+    </div>
+
+    <div class="actions">
+      <button id="exportBtn" class="secondary-btn">📥 Export to JSON</button>
+      <label for="importFile" class="secondary-btn file-label">
+        📤 Import from JSON
+        <input type="file" id="importFile" accept=".json" style="display:none" />
+      </label>
+    </div>
+
+    <footer>
+      <small>Changes are saved in browser localStorage.</small>
+    </footer>
+  </main>
+
+  <script src="manage.js"></script>
+</body>
+</html>
